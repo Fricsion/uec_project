@@ -1,7 +1,7 @@
 // heartbeat --- two circles going large and small
 #include "img.h"
 #include <math.h>
-#define PI 3.14159265358979
+#define PI 3.141592653589791
 
 int main(void) {
   struct color c1 = { 30, 255, 0 };
