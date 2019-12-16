@@ -13,5 +13,6 @@ void img_fillcycloidpoint(struct color c, int a, double degree);
 * サイクロイドを描く関数
 * {struct color c}: サイクロイドの色
 * {int a}: 転がす円の半径 (a>0)
+* {double num}: 孤を何個生成するか
 */
-void img_fillcycloid(struct color c, int a);
+void img_fillcycloid(struct color c, int a, double num);

@@ -18,10 +18,10 @@ void img_fillcycloidpoint(struct color c, int a, double degree)
     img_putpixel(c, x, y);
 }
 
-void img_fillcycloid(struct color c, int a)
+void img_fillcycloid(struct color c, int a, double num)
 {
     double degree;
-    for (degree = 0; degree < 360 * 10; degree += 0.1)
+    for (degree = 0; degree < 360 * num; degree += 0.1)
     {
         img_fillcycloidpoint(c, a, degree);
     }

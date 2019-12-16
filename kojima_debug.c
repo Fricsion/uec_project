@@ -7,7 +7,7 @@ int main(void)
 {
     struct color c1 = {30, 255, 0};
     int i;
-        img_clear();
-        img_fillcycloid(c1, 20);
-        img_write();
+    img_clear();
+    img_fillcycloid(c1, 10, 10);
+    img_write();
 }
