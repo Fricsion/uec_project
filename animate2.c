@@ -13,7 +13,7 @@ int main(void)
 	for (i = 0; i < 30; i++)
 	{
 		img_clear();
-		img_fillcircle(gray, i, 100, rad);
+		img_drawcircle2(gray, i, 100, rad);
 		img_drawcycloid(green, rad, 5);
 		img_drawtrochoid(red, rad, rad - 100, 3);
 
