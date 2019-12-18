@@ -34,3 +34,29 @@ void img_drawtrochoidpoint(struct color c, int a, int b, double degree);
 * {double num}: 孤を何個生成するか
 */
 void img_drawtrochoid(struct color c, int a, int b, double num);
+
+/*
+* 円(縁)の1点を描く関数
+* {struct color c}: 円の色
+* {int r}: 円の半径 (r>0) 
+* {int x}: 円の中心x座標 (x>0)
+* {int y}: 円の中心y座標(y>0)
+* {double degree}: 角度
+*/
+void img_drawcirclepoint(struct color c, int r, int x, int y, double degree);
+
+/*
+* 円(縁)を描く関数
+* {struct color c}: 円の色
+* {int r}: 円の半径 (r>0) 
+*/
+void img_drawcircle(struct color c, int r);
+
+/*
+* 円の中心を指定して円の縁を描く関数
+* {struct color c}: 円の色
+* {int r}: 円の半径 (r>0) 
+* {int x}: 円の中心x座標 (x>0)
+* {int y}: 円の中心y座標(y>0)
+*/
+void img_drawcircle2(struct color c, int r, int x, int y);

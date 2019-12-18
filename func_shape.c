@@ -49,3 +49,27 @@ void img_drawtrochoid(struct color c, int a, int b, double num)
         img_drawtrochoidpoint(c, a, b, degree);
     }
 }
+
+void img_drawcirclepoint(struct color c, int r, int x, int y, double degree)
+{
+    int x2, y2;
+    double radian;
+    radian = degree * M_PI / 180.0;
+    x2 = r * cos(radian) + x;
+    y2 = r * sin(radian) + y;
+    img_putpixel(c, x, y);
+}
+
+void img_drawcircle(struct color c, int r)
+{
+    img_drawcircle2(c, r, 0, 0);
+}
+
+void img_drawcircle2(struct color c, int r, int x, int y)
+{
+    double degree;
+    for (degree = 0; degree < 360; degree += 0.1)
+    {
+        img_drawcirclepoint(c, r, x, y, degree);
+    }
+}
