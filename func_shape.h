@@ -72,3 +72,12 @@ void img_drawcircle2(struct color c, int r, int x, int y);
 * {int r}: 円の半径 (r>0) 
 */
 void img_drawcircle(struct color c, int r);
+
+/*
+* 中が埋まった円を描く関数 (img.h より移行)
+* {struct color c}: 円の色
+* {int x}: 円の中心x座標
+* {int y}: 円の中心y座標
+* {int r}: 円の半径
+*/
+void img_fillcircle(struct color c, double x, double y, double r);
