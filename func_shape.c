@@ -29,11 +29,7 @@ void img_drawcycloid2(struct color c, int a, int dx, int dy, double num)
 
 void img_drawcycloid(struct color c, int a, double num)
 {
-    double degree;
-    for (degree = 0; degree < 360 * num; degree += 0.1)
-    {
-        img_drawcycloidpoint(c, a, 0, 0, degree);
-    }
+    img_drawcycloid2(c, a, 0, 0, num);
 }
 
 void img_drawtrochoidpoint(struct color c, int a, int b, double degree)
