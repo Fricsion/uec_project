@@ -6,10 +6,6 @@
 
 void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree)
 {
-    if (a <= 0)
-    {
-        return;
-    }
     int x, y;
     double radian;
     radian = degree * M_PI / 180.0;
