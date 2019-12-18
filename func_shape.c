@@ -4,7 +4,7 @@
 #include <math.h>
 #include "img.h"
 
-void img_fillcycloidpoint(struct color c, int a, double degree)
+void img_drawcycloidpoint(struct color c, int a, double degree)
 {
     if (a <= 0)
     {
@@ -18,16 +18,16 @@ void img_fillcycloidpoint(struct color c, int a, double degree)
     img_putpixel(c, x, y);
 }
 
-void img_fillcycloid(struct color c, int a, double num)
+void img_drawcycloid(struct color c, int a, double num)
 {
     double degree;
     for (degree = 0; degree < 360 * num; degree += 0.1)
     {
-        img_fillcycloidpoint(c, a, degree);
+        img_drawcycloidpoint(c, a, degree);
     }
 }
 
-void img_filltrochoidpoint(struct color c, int a, int b, double degree)
+void img_drawtrochoidpoint(struct color c, int a, int b, double degree)
 {
     if (a <= 0 || a < b)
     {
@@ -41,11 +41,11 @@ void img_filltrochoidpoint(struct color c, int a, int b, double degree)
     img_putpixel(c, x, y);
 }
 
-void img_filltrochoid(struct color c, int a, int b, double num)
+void img_drawtrochoid(struct color c, int a, int b, double num)
 {
     double degree;
     for (degree = 0; degree < 360 * num; degree += 0.1)
     {
-        img_filltrochoidpoint(c, a, b, degree);
+        img_drawtrochoidpoint(c, a, b, degree);
     }
 }

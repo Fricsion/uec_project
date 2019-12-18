@@ -9,7 +9,7 @@ int main(void)
     struct color c2 = {255, 0, 0};
     int i;
     img_clear();
-    img_fillcycloid(c1, 10, 10);
-    img_filltrochoid(c2, 10, 5, 10);
+    img_drawcycloid(c1, 10, 10);
+    img_drawtrochoid(c2, 10, 5, 10);
     img_write();
 }

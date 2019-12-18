@@ -12,8 +12,8 @@ int main(void) {
 	for(i = 0; i < 30; i++) {
 		img_clear();
 		img_fillcircle(gray, i, 100, rad);
-		img_fillcycloid(green, rad, 5);
-		img_filltrochoid(red, rad, rad-100, 3);
+		img_drawycloid(green, rad, 5);
+		img_drawtrochoid(red, rad, rad-100, 3);
 
 		img_write();
 	}
