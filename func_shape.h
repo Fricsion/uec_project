@@ -55,7 +55,7 @@ void img_drawtrochoid(struct color c, int a, int b, double num);
 * {int y}: 円の中心y座標(y>0)
 * {double degree}: 角度
 */
-void img_drawcirclepoint(struct color c, int r, int x, int y, double degree);
+void img_drawcirclepoint(struct color c, int x, int y, int r, double degree);
 
 /*
 * 円の中心を指定して円の縁を描く関数
@@ -64,7 +64,7 @@ void img_drawcirclepoint(struct color c, int r, int x, int y, double degree);
 * {int x}: 円の中心x座標 (x>0)
 * {int y}: 円の中心y座標(y>0)
 */
-void img_drawcircle2(struct color c, int r, int x, int y);
+void img_drawcircle2(struct color c, int x, int y, int r);
 
 /*
 * 円(縁)を描く関数

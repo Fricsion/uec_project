@@ -51,7 +51,7 @@ void img_drawtrochoid(struct color c, int a, int b, double num)
     }
 }
 
-void img_drawcirclepoint(struct color c, int r, int x, int y, double degree)
+void img_drawcirclepoint(struct color c, int x, int y, int r, double degree)
 {
     int x2, y2;
     double radian;
@@ -61,7 +61,7 @@ void img_drawcirclepoint(struct color c, int r, int x, int y, double degree)
     img_putpixel(c, x, y);
 }
 
-void img_drawcircle2(struct color c, int r, int x, int y)
+void img_drawcircle2(struct color c, int x, int y, int r)
 {
     double degree;
     for (degree = 0; degree < 360; degree += 0.1)
