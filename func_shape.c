@@ -60,11 +60,6 @@ void img_drawcirclepoint(struct color c, int r, int x, int y, double degree)
     img_putpixel(c, x, y);
 }
 
-void img_drawcircle(struct color c, int r)
-{
-    img_drawcircle2(c, r, 0, 0);
-}
-
 void img_drawcircle2(struct color c, int r, int x, int y)
 {
     double degree;
@@ -72,4 +67,9 @@ void img_drawcircle2(struct color c, int r, int x, int y)
     {
         img_drawcirclepoint(c, r, x, y, degree);
     }
+}
+
+void img_drawcircle(struct color c, int r)
+{
+    img_drawcircle2(c, r, 0, 0);
 }
