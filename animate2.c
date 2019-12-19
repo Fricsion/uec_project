@@ -24,6 +24,7 @@ int main(void)
 		img_fillrectangle(gray, 0, 0, 300, 100-rad);
 
 
+		// パラメータ変数 t で場合わけ
 		if(t <= 4*PI()) {
 			img_fillcircle(indigo, rad * t +divx, rad +divy, rad);
 		} else if(t <= 5*PI()) {	
@@ -34,19 +35,33 @@ int main(void)
 			img_fillcircle(indigo,  - rad * sin(t-9*PI()) +divx, - rad * cos(t-9*PI()) +divy, rad);
 		}
 
-		
+		if(t <= 4*PI()) {
+			// サイクロイドの軌跡
+			img_drawcycloid3(green, rad, 0 +divx, divy, t * 180 / PI());
+			img_drawcycloidpoint2(red, rad, 0 +divx, divy, t * 180 / PI(), rad/3);
 
+			// ２倍の動きのトロコイド
+			img_drawtrochoid2(white, 0 +divx, divy, rad, rad*2, t * 180 / PI());
+			img_drawtrochoidpoint2(darkred, 0 +divx, divy, rad, rad*2, t * 180 / PI(), rad/6);
 
-		img_drawcycloid3(green, rad, 0 +divx, divy, t * 180 / PI());
+			// 1/2倍の動きのトロコイド
+			img_drawtrochoid2(pink, 0 +divx, divy, rad, rad/2, t * 180 / PI());
+			img_drawtrochoidpoint2(darkred, 0 +divx, divy, rad, rad/2, t * 180 / PI(), rad/6);
 
-		img_drawcycloidpoint2(red, rad, 0 +divx, divy, t * 180 / PI(), rad/3);
-		img_drawtrochoid2(white, 0 +divx, divy, rad, rad*2, t * 180 / PI());
+		} else if(t >= 5*PI() && t <= 9*PI()) {
 
-		img_drawtrochoidpoint2(darkred, 0 +divx, divy, rad, rad*2, t * 180 / PI(), rad/6);
+			// サイクロイドの軌跡
+			img_drawcycloid3(green, rad, 0 +divx, divy, t * 180 / PI());
+			img_drawcycloidpoint2(red, rad, 0 +divx, divy, t * 180 / PI(), rad/3);
 
-		img_drawtrochoid2(pink, 0 +divx, divy, rad, rad/2, t * 180 / PI());
-		img_drawtrochoidpoint2(darkred, 0 +divx, divy, rad, rad/2, t * 180 / PI(), rad/6);
+			// ２倍の動きのトロコイド
+			img_drawtrochoid2(white, 0 +divx, divy, rad, rad*2, t * 180 / PI());
+			img_drawtrochoidpoint2(darkred, 0 +divx, divy, rad, rad*2, t * 180 / PI(), rad/6);
 
+			// 1/2倍の動きのトロコイド
+			img_drawtrochoid2(pink, 0 +divx, divy, rad, rad/2, t * 180 / PI());
+			img_drawtrochoidpoint2(darkred, 0 +divx, divy, rad, rad/2, t * 180 / PI(), rad/6);
+		}
 
 		img_write();
 	}
