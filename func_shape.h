@@ -2,42 +2,6 @@
 #include "img.h"
 
 /*
-* トロコイドの1点描く関数 (平行移動ver)
-* {struct color c}: トロコイドの色
-* {int dx}: x軸方向へ平行移動する量
-* {int dy}: y軸方向へ平行移動する量
-* {int a}: 転がす円の半径 (a>0)
-* {int b}: 円の中心から奇跡を描く点Pまでの距離 
-* {double degree}: 角度 (*周期2πで孤を一つ作る)
-*/
-void img_drawtrochoidpoint2(struct color c, int dx, int dy, int a, int b, double degree, int bold);
-
-/*
-* トロコイドの1点描く関数
-* {struct color c}: トロコイドの色
-* {int a}: 転がす円の半径 (a>0)
-* {int b}: 円の中心から奇跡を描く点Pまでの距離 
-* {double degree}: 角度 (*周期2πで孤を一つ作る)
-*/
-void img_drawtrochoidpoint(struct color c, int a, int b, double degree);
-/*
-* トロコイドを描く関数
-* {struct color c}: トロコイドの色
-* {int a}: 転がす円の半径 (a>0)
-* {int b}: 円の中心から奇跡を描く点Pまでの距離
-* {double degree}: どこまでサイクロイドを生成するか(角度)
-*/
-void img_drawtrochoid2(struct color c, int x, int y, int a, int b, double degree);
-/*
-* トロコイドを描く関数
-* {struct color c}: トロコイドの色
-* {int a}: 転がす円の半径 (a>0)
-* {int b}: 円の中心から奇跡を描く点Pまでの距離
-* {double num}: 孤を何個生成するか
-*/
-void img_drawtrochoid(struct color c, int a, int b, double num);
-
-/*
 * 円(縁)の1点を描く関数
 * {struct color c}: 円の色
 * {int r}: 円の半径 (r>0) 
@@ -140,6 +104,42 @@ void img_drawcycloid2(struct color c, int a, int dx, int dy, double num);
 * {double num}: 孤を何個生成するか
 */
 void img_drawcycloid(struct color c, int a, double num);
+
+/*
+* トロコイドの1点描く関数 (平行移動ver)
+* {struct color c}: トロコイドの色
+* {int dx}: x軸方向へ平行移動する量
+* {int dy}: y軸方向へ平行移動する量
+* {int a}: 転がす円の半径 (a>0)
+* {int b}: 円の中心から奇跡を描く点Pまでの距離 
+* {double degree}: 角度 (*周期2πで孤を一つ作る)
+*/
+void img_drawtrochoidpoint2(struct color c, int dx, int dy, int a, int b, double degree, int bold);
+
+/*
+* トロコイドの1点描く関数
+* {struct color c}: トロコイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {int b}: 円の中心から奇跡を描く点Pまでの距離 
+* {double degree}: 角度 (*周期2πで孤を一つ作る)
+*/
+void img_drawtrochoidpoint(struct color c, int a, int b, double degree);
+/*
+* トロコイドを描く関数
+* {struct color c}: トロコイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {int b}: 円の中心から奇跡を描く点Pまでの距離
+* {double degree}: どこまでサイクロイドを生成するか(角度)
+*/
+void img_drawtrochoid2(struct color c, int x, int y, int a, int b, double degree);
+/*
+* トロコイドを描く関数
+* {struct color c}: トロコイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {int b}: 円の中心から奇跡を描く点Pまでの距離
+* {double num}: 孤を何個生成するか
+*/
+void img_drawtrochoid(struct color c, int a, int b, double num);
 
 double PI();
 double PI_2();
