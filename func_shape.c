@@ -92,13 +92,16 @@ void img_fillcircle(struct color c, double x, double y, double r)
     }
 }
 
-void img_fillrectangle(struct color c, int x1, int x2, int y1, int y2)
+void img_fillrectangle(struct color c, int x1, int y1, int width, int height)
 {
-    for (; x1 <= x2; x1++)
+    int dx, dy, x, y;
+    for (dx = 0; dx <= width; dx++)
     {
-        for (; y1 <= y2; y1++)
+        for (dy = 0; dx <= height; dy++)
         {
-            img_putpixel(c, x1, y1);
+            x = x1 + dx;
+            y = y1 + dy;
+            img_putpixel(c, x, y);
         }
     }
 }

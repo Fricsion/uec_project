@@ -85,12 +85,12 @@ void img_fillcircle(struct color c, double x, double y, double r);
 /*
 * 長方形を描く関数
 * {struct color c}: 長方形の色
-* {int x1}: 長方形の一番左端のx座標
-* {int x2}: 長方形の一番右端のx座標
-* {int y1}: 長方形の一番上のy座標
-* {int y2}: 長方形の一番下のy座標
+* {int x1}: 長方形の左上端のx座標
+* {int y1}: 長方形の左上端のy座標
+* {int width}: 長方形の横
+* {int height}: 長方形の高さ
 */
-void img_fillrectangle(struct color c, int x1, int x2, int y1, int y2);
+void img_fillrectangle(struct color c, int x1, int y1, int width, int height);
 
 /*
 * 直線を描く関数
