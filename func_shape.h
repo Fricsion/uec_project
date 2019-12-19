@@ -77,6 +77,12 @@ void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree);
 */
 void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree, int bold);
 
+// 逆向きサイクロイド用
+void img_drawCycloidPointRev(struct color c, int a, int dx, int dy, double degree);
+
+void img_drawCycloidRev(struct color c, int a, int dx, int dy, double degree);
+
+
 /*
 * サイクロイドを描く関数 (平行移動ver)
 * {struct color c}: サイクロイドの色
