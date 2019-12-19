@@ -4,49 +4,6 @@
 #include <math.h>
 #include "img.h"
 
-void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree)
-{
-    int x, y;
-    double radian;
-    radian = degree * M_PI / 180.0;
-    x = a * (radian - sin(radian)) + dx;
-    y = a * (1 - cos(radian)) + dy;
-    img_putpixel(c, x, y);
-}
-
-void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree, int bold)
-{
-    int x, y;
-    double radian;
-    radian = degree * M_PI / 180.0;
-    x = a * (radian - sin(radian)) + dx;
-    y = a * (1 - cos(radian)) + dy;
-    img_fillcircle(c, x, y, bold);
-}
-
-void img_drawcycloid3(struct color c, int a, int dx, int dy, double degree)
-{
-    double degree2;
-    for (degree2 = 0; degree2 <= degree; degree2 += 0.1)
-    {
-        img_drawcycloidpoint(c, a, dx, dy, degree2);
-    }
-}
-
-void img_drawcycloid2(struct color c, int a, int dx, int dy, double num)
-{
-    double degree;
-    for (degree = 0; degree < 360 * num; degree += 0.1)
-    {
-        img_drawcycloidpoint(c, a, dx, dy, degree);
-    }
-}
-
-void img_drawcycloid(struct color c, int a, double num)
-{
-    img_drawcycloid2(c, a, 0, 0, num);
-}
-
 void img_drawtrochoidpoint(struct color c, int a, int b, double degree)
 {
     if (a <= 0 || a < b)
@@ -133,6 +90,49 @@ void img_drawline(struct color c, double a, int b, int x1, int x2)
         y = a * x1 + b;
         img_putpixel(c, x1, y);
     }
+}
+
+oid img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree)
+{
+    int x, y;
+    double radian;
+    radian = degree * M_PI / 180.0;
+    x = a * (radian - sin(radian)) + dx;
+    y = a * (1 - cos(radian)) + dy;
+    img_putpixel(c, x, y);
+}
+
+void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree, int bold)
+{
+    int x, y;
+    double radian;
+    radian = degree * M_PI / 180.0;
+    x = a * (radian - sin(radian)) + dx;
+    y = a * (1 - cos(radian)) + dy;
+    img_fillcircle(c, x, y, bold);
+}
+
+void img_drawcycloid3(struct color c, int a, int dx, int dy, double degree)
+{
+    double degree2;
+    for (degree2 = 0; degree2 <= degree; degree2 += 0.1)
+    {
+        img_drawcycloidpoint(c, a, dx, dy, degree2);
+    }
+}
+
+void img_drawcycloid2(struct color c, int a, int dx, int dy, double num)
+{
+    double degree;
+    for (degree = 0; degree < 360 * num; degree += 0.1)
+    {
+        img_drawcycloidpoint(c, a, dx, dy, degree);
+    }
+}
+
+void img_drawcycloid(struct color c, int a, double num)
+{
+    img_drawcycloid2(c, a, 0, 0, num);
 }
 
 double PI()

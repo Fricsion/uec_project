@@ -2,55 +2,6 @@
 #include "img.h"
 
 /*
-* サイクロイドの1点描く関数
-* {struct color c}: サイクロイドの色
-* {int a}: 転がす円の半径 (a>0)
-* {int dx}: x軸方向に平行移動する量
-* {int dy}: y軸方向に平行移動する量 
-* {double degree}: 角度 (*周期2πで孤を一つ作る)
-*/
-void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree);
-
-/*
-* サイクロイドの1点描く関数
-* {struct color c}: サイクロイドの色
-* {int a}: 転がす円の半径 (a>0)
-* {int dx}: x軸方向に平行移動する量
-* {int dy}: y軸方向に平行移動する量 
-* {double degree}: 角度 (*周期2πで孤を一つ作る)
-* {int bold}: 点の太さ
-*/
-void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree);
-
-/*
-* サイクロイドを描く関数 (平行移動ver)
-* {struct color c}: サイクロイドの色
-* {int a}: 転がす円の半径 (a>0)
-* {int dx}: x軸方向に平行移動する量
-* {int dy}: y軸方向に平行移動する量 
-* {double degree}: どこまでサイクロイドを生成するか(角度)
-*/
-void img_drawcycloid3(struct color c, int a, int dx, int dy, double degree);
-
-/*
-* サイクロイドを描く関数 (平行移動ver)
-* {struct color c}: サイクロイドの色
-* {int a}: 転がす円の半径 (a>0)
-* {int dx}: x軸方向に平行移動する量
-* {int dy}: y軸方向に平行移動する量 
-* {double num}: 孤を何個生成するか
-*/
-void img_drawcycloid2(struct color c, int a, int dx, int dy, double num);
-
-/*
-* サイクロイドを描く関数 (中心は原点とする)
-* {struct color c}: サイクロイドの色
-* {int a}: 転がす円の半径 (a>0)
-* {double num}: 孤を何個生成するか
-*/
-void img_drawcycloid(struct color c, int a, double num);
-
-/*
 * トロコイドの1点描く関数
 * {struct color c}: トロコイドの色
 * {int a}: 転がす円の半径 (a>0)
@@ -122,6 +73,55 @@ void img_fillrectangle(struct color c, int x1, int y1, int width, int height);
 * {int x2}: 直線の終点のx座標
 */
 void img_drawline(struct color c, double a, int b, int x1, int x2);
+
+/*
+* サイクロイドの1点描く関数
+* {struct color c}: サイクロイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {int dx}: x軸方向に平行移動する量
+* {int dy}: y軸方向に平行移動する量 
+* {double degree}: 角度 (*周期2πで孤を一つ作る)
+*/
+void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree);
+
+/*
+* サイクロイドの1点描く関数
+* {struct color c}: サイクロイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {int dx}: x軸方向に平行移動する量
+* {int dy}: y軸方向に平行移動する量 
+* {double degree}: 角度 (*周期2πで孤を一つ作る)
+* {int bold}: 点の太さ
+*/
+void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree);
+
+/*
+* サイクロイドを描く関数 (平行移動ver)
+* {struct color c}: サイクロイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {int dx}: x軸方向に平行移動する量
+* {int dy}: y軸方向に平行移動する量 
+* {double degree}: どこまでサイクロイドを生成するか(角度)
+*/
+void img_drawcycloid3(struct color c, int a, int dx, int dy, double degree);
+
+/*
+* サイクロイドを描く関数 (平行移動ver)
+* {struct color c}: サイクロイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {int dx}: x軸方向に平行移動する量
+* {int dy}: y軸方向に平行移動する量 
+* {double num}: 孤を何個生成するか
+*/
+void img_drawcycloid2(struct color c, int a, int dx, int dy, double num);
+
+/*
+* サイクロイドを描く関数 (中心は原点とする)
+* {struct color c}: サイクロイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {double num}: 孤を何個生成するか
+*/
+void img_drawcycloid(struct color c, int a, double num);
 
 double PI();
 double PI_2();
