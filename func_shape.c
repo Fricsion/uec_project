@@ -55,7 +55,7 @@ void img_drawcirclepoint(struct color c, int x, int y, int r, double degree)
 {
     int x2, y2;
     double radian;
-    radian = degree * getPI() / 180.0;
+    radian = degree * M_PI / 180.0;
     x2 = r * cos(radian) + x;
     y2 = r * sin(radian) + y;
     img_putpixel(c, x2, y2);
