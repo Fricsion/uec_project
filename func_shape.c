@@ -120,3 +120,11 @@ double PI()
 {
     return M_PI;
 }
+double PI_2()
+{
+    return M_PI_2;
+}
+double PI_4()
+{
+    return M_PI_4;
+}
