@@ -93,7 +93,7 @@ void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree);
 * {double degree}: 角度 (*周期2πで孤を一つ作る)
 * {int bold}: 点の太さ
 */
-void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree);
+void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree, int bold);
 
 /*
 * サイクロイドを描く関数 (平行移動ver)
