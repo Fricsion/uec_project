@@ -4,18 +4,31 @@
 #include <math.h>
 #include "img.h"
 
-void img_drawtrochoidpoint(struct color c, int a, int b, double degree)
+void img_drawtrochoidpoint2(struct color c, int dx, int dy, int a, int b, double degree)
 {
-    if (a <= 0 || a < b)
+    if (a <= 0)
     {
         return;
     }
     int x, y;
     double radian;
     radian = degree * M_PI / 180.0;
-    x = a * radian - b * sin(radian);
-    y = a - b * cos(radian);
+    x = a * radian - b * sin(radian) + dx;
+    y = a - b * cos(radian) + dy;
     img_putpixel(c, x, y);
+}
+void img_drawtrochoidpoint(struct color c, int a, int b, double degree)
+{
+    img_drawtrochoidpoint2(c, 0, 0, a, b, degree);
+}
+
+void img_drawtrochoid2(struct color c, int x, int y, int a, int b, double degree)
+{
+    double degree2;
+    for (degree2 = 0; degree2 <= degree; degree2 += 0.1)
+    {
+        img_drawtrochoidpoint2(c, x, y, a, b, degree2);
+    }
 }
 
 void img_drawtrochoid(struct color c, int a, int b, double num)
