@@ -92,7 +92,7 @@ void img_drawline(struct color c, double a, int b, int x1, int x2)
     }
 }
 
-oid img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree)
+void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree)
 {
     int x, y;
     double radian;
