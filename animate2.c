@@ -25,27 +25,27 @@ int main(void)
 
 
 		if(t <= 4*PI()) {
-			img_fillcircle(indigo, rad * t +divx, rad +divy +rad, rad);
+			img_fillcircle(indigo, rad * t +divx, rad +divy, rad);
 		} else if(t <= 5*PI()) {	
-			img_fillcircle(indigo, rad * 4*PI() + rad * sin(t-4*PI()) +divx +rad,  rad * cos(t-4*PI()) +divy, rad);
+			img_fillcircle(indigo, rad * 4*PI() + rad * sin(t-4*PI()) +divx,  rad * cos(t-4*PI()) +divy, rad);
 		} else if(t <= 9*PI()) {
-			img_fillcircle(indigo, rad * 4*PI()  - rad * (t - 5*PI()) +divx, -rad +divy +rad, rad);
+			img_fillcircle(indigo, rad * 4*PI()  - rad * (t - 5*PI()) +divx, -rad +divy, rad);
 		} else if(t <= 10*PI()) {
-			img_fillcircle(indigo,  - rad * sin(t-9*PI()) +divx, - rad * cos(t-9*PI()) +divy +rad, rad);
+			img_fillcircle(indigo,  - rad * sin(t-9*PI()) +divx, - rad * cos(t-9*PI()) +divy, rad);
 		}
 
 		
 
 
-		img_drawcycloid3(green, rad, 0 +divx, rad +divy, t * 180 / PI());
+		img_drawcycloid3(green, rad, 0 +divx, divy, t * 180 / PI());
 
-		img_drawcycloidpoint2(red, rad, 0 +divx, rad +divy, t * 180 / PI(), rad/3);
-		img_drawtrochoid2(white, 0 +divx, rad +divy, rad, rad*2, t * 180 / PI());
+		img_drawcycloidpoint2(red, rad, 0 +divx, divy, t * 180 / PI(), rad/3);
+		img_drawtrochoid2(white, 0 +divx, divy, rad, rad*2, t * 180 / PI());
 
-		img_drawtrochoidpoint2(darkred, 0 +divx, rad +divy, rad, rad*2, t * 180 / PI(), rad/6);
+		img_drawtrochoidpoint2(darkred, 0 +divx, divy, rad, rad*2, t * 180 / PI(), rad/6);
 
-		img_drawtrochoid2(pink, 0 +divx, rad +divy, rad, rad/2, t * 180 / PI());
-		img_drawtrochoidpoint2(darkred, 0 +divx, rad +divy, rad, rad/2, t * 180 / PI(), rad/6);
+		img_drawtrochoid2(pink, 0 +divx, divy, rad, rad/2, t * 180 / PI());
+		img_drawtrochoidpoint2(darkred, 0 +divx, divy, rad, rad/2, t * 180 / PI(), rad/6);
 
 
 		img_write();
