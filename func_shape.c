@@ -89,6 +89,22 @@ void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree,
     img_fillcircle(c, x, y, bold);
 }
 
+void img_drawCycloidPointRev(struct color c, int a, int dx, int dy, double degree) {
+	int x, y;
+	double radian = degree * M_PI / 180.0;
+    x = a * (radian - sin(4*M_PI)) - a * (radian - sin(radian)) + dx;
+    y = - a * (1 - cos(radian)) + dy;
+    img_putpixel(c, x, y);
+
+}
+
+void img_drawCycloidRev(struct color c, int a, int dx, int dy, double degree) {
+	double t;
+	for (t = 0; t <= degree; t += 0.1) {
+		img_drawCycloidPointRev(c, a, dx, dy, t);
+	}
+}
+
 void img_drawcycloid3(struct color c, int a, int dx, int dy, double degree)
 {
     double degree2;
