@@ -21,7 +21,7 @@ void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree,
     radian = degree * M_PI / 180.0;
     x = a * (radian - sin(radian)) + dx;
     y = a * (1 - cos(radian)) + dy;
-    img_drawcircle2(c, x, y, bold);
+    img_fillcircle(c, x, y, bold);
 }
 
 void img_drawcycloid3(struct color c, int a, int dx, int dy, double degree)

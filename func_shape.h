@@ -12,6 +12,17 @@
 void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree);
 
 /*
+* サイクロイドの1点描く関数
+* {struct color c}: サイクロイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {int dx}: x軸方向に平行移動する量
+* {int dy}: y軸方向に平行移動する量 
+* {double degree}: 角度 (*周期2πで孤を一つ作る)
+* {int bold}: 点の太さ
+*/
+void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree);
+
+/*
 * サイクロイドを描く関数 (平行移動ver)
 * {struct color c}: サイクロイドの色
 * {int a}: 転がす円の半径 (a>0)
