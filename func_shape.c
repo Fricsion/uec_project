@@ -135,7 +135,7 @@ void img_drawtrochoid2(struct color c, int x, int y, int a, int b, double degree
     double degree2;
     for (degree2 = 0; degree2 <= degree; degree2 += 0.1)
     {
-        img_drawtrochoidpoint2(c, x, y, a, b, degree2);
+        img_drawtrochoidpoint2(c, x, y, a, b, degree2, 1);
     }
 }
 
