@@ -1,21 +1,22 @@
 #include "func_shape.h"
 #include <math.h>
-#define PI 3.14159265358979
 
 int main(void)
 {
 	struct color green = {0, 255, 0};
 	struct color red = {255, 0, 0};
 	struct color gray = {200, 200, 200};
+	struct color white = {255, 255, 255};
 	int rad = 50;
 
-	int i;
-	for (i = 0; i < 30; i++)
+	float t;
+	for (t = 0.0; t < 2*PI(); t += PI()/10)
 	{
 		img_clear();
-		img_drawcircle2(gray, i, 100, rad);
-		img_drawcycloid(green, rad, 5);
-		img_drawtrochoid(red, rad, rad - 100, 3);
+
+		img_drawcycloidpoint(green, rad, 0, 50, t);
+
+		img_drawcircle2(gray, rad * t, 100, rad);
 
 		img_write();
 	}
