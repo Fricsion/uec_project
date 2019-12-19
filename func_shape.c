@@ -14,6 +14,16 @@ void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree)
     img_putpixel(c, x, y);
 }
 
+void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree, int bold)
+{
+    int x, y;
+    double radian;
+    radian = degree * M_PI / 180.0;
+    x = a * (radian - sin(radian)) + dx;
+    y = a * (1 - cos(radian)) + dy;
+    img_drawcircle2(c, x, y, bold);
+}
+
 void img_drawcycloid3(struct color c, int a, int dx, int dy, double degree)
 {
     double degree2;
