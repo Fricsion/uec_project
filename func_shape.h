@@ -80,7 +80,15 @@ void img_drawcycloidpoint2(struct color c, int a, int dx, int dy, double degree,
 // 逆向きサイクロイド用
 void img_drawCycloidPointRev(struct color c, int a, int dx, int dy, double degree);
 
+void img_drawCycloidPointRev2(struct color c, int a, int dx, int dy, double degree, int bold);
+
 void img_drawCycloidRev(struct color c, int a, int dx, int dy, double degree);
+
+// 逆向きトロコイド用
+
+void img_drawTrochoidPointRev(struct color c, int dx, int dy, int a, int b, double degree);
+void img_drawTrochoidPointRev2(struct color c, int dx, int dy, int a, int b, double degree, int bold);
+void img_drawTrochoidRev(struct color c, int x, int y, int a, int b, double degree);
 
 
 /*

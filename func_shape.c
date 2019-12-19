@@ -171,6 +171,39 @@ void img_drawtrochoid(struct color c, int a, int b, double num)
     }
 }
 
+void img_drawTrochoidPointRev(struct color c, int dx, int dy, int a, int b, double degree) {
+    if (a <= 0)
+    {
+        return;
+    }
+    int x, y;
+    double radian;
+    radian = degree * M_PI / 180.0;
+    x = 300 - a * radian - b * sin(radian) - dx;
+    y = - a - b * cos(radian) + dy;
+	img_putpixel(c, x, y);
+}
+
+void img_drawTrochoidPointRev2(struct color c, int dx, int dy, int a, int b, double degree, int bold) {
+	if (a <= 0)
+    {
+        return;
+    }
+    int x, y;
+    double radian;
+    radian = degree * M_PI / 180.0;
+    x = 300 - a * radian - b * sin(radian) - dx;
+    y = - a - b * cos(radian) + dy;
+	img_fillcircle(c, x, y, bold);	
+}
+
+void img_drawTrochoidRev(struct color c, int x, int y, int a, int b, double degree) {
+	double t;
+	for (t = 0; t <= degree; t += 0.1) {
+		img_drawTrochoidPointRev(c, x, y, a, b, t);
+	}
+}
+
 double PI()
 {
     return M_PI;
