@@ -76,7 +76,7 @@ void img_fillrectangle(struct color c, int x1, int y1, int width, int height)
         for (dy = 0; dy <= height; dy++)
         {
             x = x1 + dx;
-            y = y1 + dy;
+            y = y1 - dy;
             img_putpixel(c, x, y);
         }
     }
