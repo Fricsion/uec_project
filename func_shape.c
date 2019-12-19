@@ -102,3 +102,13 @@ void img_fillrectangle(struct color c, int x1, int x2, int y1, int y2)
         }
     }
 }
+
+void img_drawline(struct color c, double a, int b, int x1, int x2)
+{
+    int y;
+    for (; x1 <= x2; x1++)
+    {
+        y = a * x1 + b;
+        img_putpixel(c, x1, y);
+    }
+}

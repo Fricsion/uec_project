@@ -91,3 +91,13 @@ void img_fillcircle(struct color c, double x, double y, double r);
 * {int y2}: 長方形の一番下のy座標
 */
 void img_fillrectangle(struct color c, int x1, int x2, int y1, int y2);
+
+/*
+* 直線を描く関数
+* {struct color c}: 線の色
+* {double a}: 傾き
+* {int b}: y切片
+* {int x1}: 直線の始点のx座標
+* {int x2}: 直線の終点のx座標
+*/
+void img_drawline(struct color c, double a, int b, int x1, int x2);
