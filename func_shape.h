@@ -17,6 +17,16 @@ void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree);
 * {int a}: 転がす円の半径 (a>0)
 * {int dx}: x軸方向に平行移動する量
 * {int dy}: y軸方向に平行移動する量 
+* {double degree}: どこまでサイクロイドを生成するか(角度)
+*/
+void img_drawcycloid3(struct color c, int a, int dx, int dy, double degree);
+
+/*
+* サイクロイドを描く関数 (平行移動ver)
+* {struct color c}: サイクロイドの色
+* {int a}: 転がす円の半径 (a>0)
+* {int dx}: x軸方向に平行移動する量
+* {int dy}: y軸方向に平行移動する量 
 * {double num}: 孤を何個生成するか
 */
 void img_drawcycloid2(struct color c, int a, int dx, int dy, double num);

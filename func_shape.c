@@ -14,6 +14,15 @@ void img_drawcycloidpoint(struct color c, int a, int dx, int dy, double degree)
     img_putpixel(c, x, y);
 }
 
+void img_drawcycloid3(struct color c, int a, int dx, int dy, double degree)
+{
+    double degree2;
+    for (degree2 = 0; degree2 <= degree; degree2 += 0.1)
+    {
+        img_drawcycloidpoint(c, a, dx, dy, degree2);
+    }
+}
+
 void img_drawcycloid2(struct color c, int a, int dx, int dy, double num)
 {
     double degree;
