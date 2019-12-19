@@ -66,7 +66,7 @@ void img_drawcircle2(struct color c, int x, int y, int r)
     double degree;
     for (degree = 0; degree < 360; degree += 0.1)
     {
-        img_drawcirclepoint(c, r, x, y, degree);
+        img_drawcirclepoint(c, x, y, r, degree);
     }
 }
 
