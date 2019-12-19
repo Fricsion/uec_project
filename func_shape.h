@@ -10,7 +10,7 @@
 * {int b}: 円の中心から奇跡を描く点Pまでの距離 
 * {double degree}: 角度 (*周期2πで孤を一つ作る)
 */
-void img_drawtrochoidpoint2(struct color c, int dx, int dy, int a, int b, double degree);
+void img_drawtrochoidpoint2(struct color c, int dx, int dy, int a, int b, double degree, int bold);
 
 /*
 * トロコイドの1点描く関数

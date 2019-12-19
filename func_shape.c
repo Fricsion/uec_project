@@ -4,7 +4,7 @@
 #include <math.h>
 #include "img.h"
 
-void img_drawtrochoidpoint2(struct color c, int dx, int dy, int a, int b, double degree)
+void img_drawtrochoidpoint2(struct color c, int dx, int dy, int a, int b, double degree, int bold)
 {
     if (a <= 0)
     {
@@ -15,7 +15,7 @@ void img_drawtrochoidpoint2(struct color c, int dx, int dy, int a, int b, double
     radian = degree * M_PI / 180.0;
     x = a * radian - b * sin(radian) + dx;
     y = a - b * cos(radian) + dy;
-    img_putpixel(c, x, y);
+    img_fillcircle(c, x, y, bold);
 }
 void img_drawtrochoidpoint(struct color c, int a, int b, double degree)
 {
