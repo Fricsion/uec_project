@@ -21,7 +21,7 @@ int main(void)
 	{
 		img_clear();
 
-		img_fillrectangle(gray, 0, 0, 300, 100-rad);
+		img_fillrectangle(gray, 0, 0, 300, 100);
 
 
 		// パラメータ変数 t で場合わけ
@@ -52,8 +52,8 @@ int main(void)
 
 			// サイクロイドの軌跡
 			img_drawCycloidRev(green, rad, divx, divy, (t-5*PI()) * 180 / PI());
-//			img_drawcycloidpoint2(red, rad, 0 +divx, divy, t * 180 / PI(), rad/3);
-//
+			img_drawCycloidPointRev2(red, rad, divx, divy, (t-5*PI()) * 180 / PI(), rad/3);
+
 //			// ２倍の動きのトロコイド
 //			img_drawtrochoid2(white, 0 +divx, divy, rad, rad*2, t * 180 / PI());
 //			img_drawtrochoidpoint2(darkred, 0 +divx, divy, rad, rad*2, t * 180 / PI(), rad/6);
