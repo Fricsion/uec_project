@@ -116,7 +116,7 @@ void img_drawline(struct color c, double a, int b, int x1, int x2)
     }
 }
 
-double getPI()
+double PI()
 {
     return M_PI;
 }
