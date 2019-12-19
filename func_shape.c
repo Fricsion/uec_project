@@ -97,7 +97,7 @@ void img_fillrectangle(struct color c, int x1, int y1, int width, int height)
     int dx, dy, x, y;
     for (dx = 0; dx <= width; dx++)
     {
-        for (dy = 0; dx <= height; dy++)
+        for (dy = 0; dy <= height; dy++)
         {
             x = x1 + dx;
             y = y1 + dy;
