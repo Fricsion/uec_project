@@ -7,6 +7,7 @@ int main(void)
 	struct color red = {255, 0, 0};
 	struct color gray = {200, 200, 200};
 	struct color white = {255, 255, 255};
+	struct color indigo = {29, 49, 86};
 	int rad = 50;
 
 	float t;
@@ -14,9 +15,12 @@ int main(void)
 	{
 		img_clear();
 
-		img_drawcycloidpoint(green, rad, 0, 50, t);
+		img_drawcycloid3(green, rad, 0, 50, t * 180 / PI());
 
-		img_drawcircle2(gray, rad * t, 100, rad);
+
+		img_fillcircle(indigo, rad * t, 100, rad);
+
+		img_drawcycloidpoint2(red, rad, 0, 50, t * 180 / PI(), 5);
 
 		img_write();
 	}

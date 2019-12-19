@@ -6,15 +6,19 @@ static unsigned char buf[HEIGHT][WIDTH][3];
 static int filecnt = 0;
 static char fname[100];
 
+struct color bgColor = {180, 140, 80};
+
 void img_clear(void)
 {
   int i, j;
   for (j = 0; j < HEIGHT; ++j)
   {
-    for (i = 0; i < WIDTH; ++i)
-    {
-      buf[j][i][0] = buf[j][i][1] = buf[j][i][2] = 255;
-    }
+	  for (i = 0; i < WIDTH; ++i)
+	  {
+		  buf[j][i][0] = bgColor.r;
+		  buf[j][i][1] = bgColor.g;
+		  buf[j][i][2] = bgColor.b;
+	  }
   }
 }
 
