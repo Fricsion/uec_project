@@ -72,27 +72,8 @@ void img_fillCircle(struct color c, double x, double y, double r)
     }
 }
 
-void img_fillCircle2(struct color c, double x, double y, double r, int min_deg, int max_deg)
+void img_fillCircle2(struct color c, double ox, double oy, double r, int t1, int t2)
 {
-    int imin = (int)(x - r - 1), imax = (int)(x + r + 1);
-    int jmin = (int)(y - r - 1), jmax = (int)(y + r + 1);
-    int i, j;
-    for (j = jmin; j <= jmax; ++j)
-    {
-        for (i = imin; i <= imax; ++i)
-        {
-            if ((x - i) * (x - i) + (y - j) * (y - j) <= r * r)
-            {
-                double radian = getRadian(x, y, i, j);
-                int degree = radian * 180 / PI();
-                int c_deg = degree % 360;
-                if (min_deg <= c_deg && c_deg <= max_deg)
-                {
-                    img_putpixel(c, i, j);
-                }
-            }
-        }
-    }
 }
 
 void img_fillRectangle(struct color c, int x1, int y1, int width, int height)
