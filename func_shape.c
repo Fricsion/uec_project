@@ -75,9 +75,9 @@ void img_fillCircle(struct color c, double x, double y, double r)
 void img_fillCircle2(struct color c, double ox, double oy, double r, int t1, int t2)
 {
 	int t;
-	for (t = t1; t <= t2; t++) {
+	for (t = t1; t <= t2; t+= PI()/3) {
 		int a;
-		for (a = 1; a <= r; a++) {
+		for (a = 0; a <= r; a += 1) {
 			int x, y;
 			x = ox + a * cos(t);
 			y = oy + a * sin(t);
