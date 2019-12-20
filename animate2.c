@@ -68,21 +68,21 @@ int main(void)
 			if (t >= 5 * PI())
 			{
 				// サイクロイドの軌跡
-				img_drawCycloidRev(green, rad, 4 * rad * PI() + divx, divy, (t <= 9 * PI()) ? ((t - 5 * PI()) * 180 / PI()) : (0 * PI() * 180 / PI()));
+				img_drawCycloidRev(green, rad, 4 * rad * PI() + divx, divy, (t <= 9 * PI()) ? ((t - 5 * PI()) * 180 / PI()) : (4 * PI() * 180 / PI()));
 				if (t <= 10 * PI())
 				{
-					img_drawCycloidPointRev2(red, rad, 4 * rad * PI() + divx, divy, (t <= 9 * PI()) ? ((t - 5 * PI()) * 180 / PI()) : (0 * PI() * 180 / PI()), rad / 3);
+					img_drawCycloidPointRev2(red, rad, 4 * rad * PI() + divx, divy, (t <= 9 * PI()) ? ((t - 5 * PI()) * 180 / PI()) : (4 * PI() * 180 / PI()), rad / 3);
 				}
 
 				//			// ２倍の動きのトロコイド
-				img_drawTrochoidRev(white, rad * 4 * PI() + divx, divy, rad, rad * 2, (t <= 9 * PI()) ? ((t - 5 * PI()) * 180 / PI()) : (0 * PI() * 180 / PI()));
+				img_drawTrochoidRev(white, rad * 4 * PI() + divx, divy, rad, rad * 2, (t <= 9 * PI()) ? ((t - 5 * PI()) * 180 / PI()) : (4 * PI() * 180 / PI()));
 				if (t <= 9 * PI())
 				{
 					img_drawTrochoidPointRev2(darkred, rad * 4 * PI() + divx, divy, rad, rad * 2, (t - 5 * PI()) * 180 / PI(), rad / 6);
 				}
 
 				//			// 1/2倍の動きのトロコイド
-				img_drawTrochoidRev(pink, rad * 4 * PI() + divx, divy, rad, rad / 2, (t <= 9 * PI()) ? ((t - 5 * PI()) * 180 / PI()) : (0 * PI() * 180 / PI()));
+				img_drawTrochoidRev(pink, rad * 4 * PI() + divx, divy, rad, rad / 2, (t <= 9 * PI()) ? ((t - 5 * PI()) * 180 / PI()) : (4 * PI() * 180 / PI()));
 				if (t <= 9 * PI())
 				{
 					img_drawTrochoidPointRev2(darkred, rad * 4 * PI() + divx, divy, rad, rad / 2, (t - 5 * PI()) * 180 / PI(), rad / 6);
