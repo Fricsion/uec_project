@@ -45,7 +45,7 @@ void img_fillCircle(struct color c, double x, double y, double r);
 * {int min_degree}: 始点の角度
 * {int max_degree}: 終点の角度
 */
-void img_fillCircle2(struct color c, double x, double y, double r, int min_deg, int max_deg);
+void img_fillCircle2(struct color c, double ox, double oy, double r, int t1, int t2);
 
 /*
 * 長方形を描く関数

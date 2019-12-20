@@ -23,11 +23,14 @@ int main(void)
 		img_clear();
 
 		img_fillRectangle(gray, 0, 0, 300, 100);
+		
+		img_fillCircle2(red, 30, 30, rad, -6/PI(), 2/3*PI());
 
 		// パラメータ変数 t で場合わけ
 		if (t <= 4 * PI())
 		{
 			img_fillCircle(indigo, rad * t + divx, rad + divy, rad);
+			img_fillCircle2(gray, rad*t +divx, rad + divy, rad, t*180/PI(), (t+PI())*180/PI());
 		}
 		else if (t <= 5 * PI())
 		{
