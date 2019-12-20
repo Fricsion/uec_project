@@ -152,7 +152,7 @@ void img_drawCycloidPointRev2(struct color c, int a, int dx, int dy, double degr
     y = a * (1 - cos(radian));
     X = -x + dx;
     Y = -y + dy;
-    img_fillcircle(c, X, Y, bold);
+    img_fillCircle(c, X, Y, bold);
 }
 
 void img_drawCycloidRev(struct color c, int a, int dx, int dy, double degree)
@@ -242,7 +242,7 @@ void img_drawTrochoidPointRev2(struct color c, int dx, int dy, int a, int b, dou
     y = a - b * cos(radian);
     X = -x + dx;
     Y = -y + dy;
-    img_fillcircle(c, X, Y, bold);
+    img_fillCircle(c, X, Y, bold);
 }
 
 void img_drawTrochoidRev(struct color c, int x, int y, int a, int b, double degree)
