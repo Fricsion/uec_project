@@ -85,18 +85,6 @@ void img_fillCircle2(struct color c, double x, double y, double r, int min_deg, 
             {
                 double radian = getRadian(x, y, i, j);
                 int degree = radian * 180 / PI();
-                if (min_deg < 0 && 0 <= max_deg)
-                {
-                    if (min_deg % 360 < degree % 360 && degree % 360 < 360)
-                    {
-                        img_putpixel(c, i, j);
-                    }
-                    else if (0 < degree && degree < max_deg % 360)
-                    {
-                        img_putpixel(c, i, j);
-                    }
-                    continue;
-                }
                 if (min_deg <= degree && degree <= max_deg)
                 {
                     img_putpixel(c, i, j);
