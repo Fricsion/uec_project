@@ -22,7 +22,7 @@ int main(void)
 	{
 		img_clear();
 
-		img_fillrectangle(gray, 0, 0, 300, 100);
+		img_fillRectangle(gray, 0, 0, 300, 100);
 
 		// パラメータ変数 t で場合わけ
 		if (t <= 4 * PI())
@@ -45,21 +45,21 @@ int main(void)
 		if (t <= 12 * PI())
 		{
 			// サイクロイドの軌跡
-			img_drawcycloid3(green, rad, 0 + divx, divy, (t <= 4 * PI()) ? (t * 180 / PI()) : (4 * PI() * 180 / PI()));
+			img_drawCycloid3(green, rad, 0 + divx, divy, (t <= 4 * PI()) ? (t * 180 / PI()) : (4 * PI() * 180 / PI()));
 			if (t <= 5 * PI())
 			{
 				img_drawCycloidPoint2(red, rad, 0 + divx, divy, (t <= 4 * PI()) ? (t * 180 / PI()) : (4 * PI() * 180 / PI()), rad / 3);
 			}
 
 			// ２倍の動きのトロコイド
-			img_drawtrochoid2(white, divx, divy, rad, rad * 2, (t <= 4 * PI()) ? (t * 180 / PI()) : (4 * PI() * 180 / PI()));
+			img_drawTrochoid2(white, divx, divy, rad, rad * 2, (t <= 4 * PI()) ? (t * 180 / PI()) : (4 * PI() * 180 / PI()));
 			if (t <= 4 * PI())
 			{
 				img_drawTrochoidPoint2(darkred, divx, divy, rad, rad * 2, (t <= 4 * PI()) ? (t * 180 / PI()) : (4 * PI() * 180 / PI()), rad / 6);
 			}
 
 			// 1/2倍の動きのトロコイド
-			img_drawtrochoid2(pink, divx, divy, rad, rad / 2, (t <= 4 * PI()) ? (t * 180 / PI()) : (4 * PI() * 180 / PI()));
+			img_drawTrochoid2(pink, divx, divy, rad, rad / 2, (t <= 4 * PI()) ? (t * 180 / PI()) : (4 * PI() * 180 / PI()));
 			if (t <= 4 * PI())
 			{
 				img_drawTrochoidPoint2(darkred, divx, divy, rad, rad / 2, (t <= 4 * PI()) ? (t * 180 / PI()) : (4 * PI() * 180 / PI()), rad / 6);
