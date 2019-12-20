@@ -37,6 +37,17 @@ void img_drawCircle2(struct color c, int x, int y, int r);
 void img_fillCircle(struct color c, double x, double y, double r);
 
 /*
+* 中が埋まった円を描く関数 (決まった角の値域を持つ)
+* {struct color c}: 円の色
+* {int x}: 円の中心x座標
+* {int y}: 円の中心y座標
+* {int r}: 円の半径
+* {int min_degree}: 始点の角度
+* {int max_degree}: 終点の角度
+*/
+void img_fillCircle2(struct color c, double x, double y, double r, int min_deg, int max_deg);
+
+/*
 * 長方形を描く関数
 * {struct color c}: 長方形の色
 * {int x1}: 長方形の左上端のx座標
