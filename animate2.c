@@ -13,7 +13,7 @@ int main(void)
 	struct color yellow = {251, 208, 29};
 	struct color pink = {255, 192, 203};
 	struct color darkred = {153, 51, 51};
-	int rad = 15;
+	int rad = 18;
 
 	int divx = 300 / 2 - rad * 2 * PI();
 	int divy = 100; // レイヤーのずれの値
@@ -31,22 +31,22 @@ int main(void)
 		if (t <= 4 * PI())
 		{
 			img_fillCircle(indigo, rad * t + divx, rad + divy, rad);
-			img_drawLinePolar(white, rad*t +divx, rad +divy, rad, 3*PI()/2-t);
+			img_drawLinePolar(yellow, rad*t +divx, rad +divy, 2*rad, 3*PI()/2-t);
 		}
 		else if (t <= 5 * PI())
 		{
 			img_fillCircle(indigo, rad * 4 * PI() + rad * sin(t - 4 * PI()) + divx, rad * cos(t - 4 * PI()) + divy, rad);
-			img_drawLinePolar(white, rad * 4 * PI() + rad * sin(t - 4 * PI()) + divx, rad * cos(t - 4 * PI()) + divy, rad, 3*PI()/2-t);
+			img_drawLinePolar(yellow, rad * 4 * PI() + rad * sin(t - 4 * PI()) + divx, rad * cos(t - 4 * PI()) + divy, rad, 3*PI()/2-t);
 		}
 		else if (t <= 9 * PI())
 		{
 			img_fillCircle(indigo, rad * 4 * PI() - rad * (t - 5 * PI()) + divx, -rad + divy, rad);
-			img_drawLinePolar(white, rad * 4 * PI() - rad * (t - 5 * PI()) + divx, -rad + divy, rad, -PI()/2 - t); 
+			img_drawLinePolar(yellow, rad * 4 * PI() - rad * (t - 5 * PI()) + divx, -rad + divy, rad*2, -PI()/2 - t); 
 		}
 		else if (t <= 10 * PI())
 		{
 			img_fillCircle(indigo, -rad * sin(t - 9 * PI()) + divx, -rad * cos(t - 9 * PI()) + divy, rad);
-			img_drawLinePolar(white, -rad * sin(t - 9 * PI()) + divx, -rad * cos(t - 9 * PI()) + divy, rad, -PI()/2 - t);
+			img_drawLinePolar(yellow, -rad * sin(t - 9 * PI()) + divx, -rad * cos(t - 9 * PI()) + divy, rad, -PI()/2 - t);
 		}
 
 		if (t <= 12 * PI())
