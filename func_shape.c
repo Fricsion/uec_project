@@ -35,7 +35,7 @@ void img_drawCirclePoint(struct color c, int x, int y, int r, double degree)
 {
     int x2, y2;
     double radian;
-    radian = degree * M_PI / 180.0;
+    radian = degree * PI() / 180.0;
     x2 = r * cos(radian) + x;
     y2 = r * sin(radian) + y;
     img_putpixel(c, x2, y2);
@@ -122,7 +122,7 @@ void img_drawCycloidPoint(struct color c, int a, int dx, int dy, double degree)
 {
     int x, y;
     double radian;
-    radian = degree * M_PI / 180.0;
+    radian = degree * PI() / 180.0;
     x = a * (radian - sin(radian)) + dx;
     y = a * (1 - cos(radian)) + dy;
     img_putpixel(c, x, y);
@@ -132,7 +132,7 @@ void img_drawCycloidPoint2(struct color c, int a, int dx, int dy, double degree,
 {
     int x, y;
     double radian;
-    radian = degree * M_PI / 180.0;
+    radian = degree * PI() / 180.0;
     x = a * (radian - sin(radian)) + dx;
     y = a * (1 - cos(radian)) + dy;
     img_fillCircle(c, x, y, bold);
@@ -147,7 +147,7 @@ void img_drawCycloidPointRev2(struct color c, int a, int dx, int dy, double degr
 {
     int x, y, X, Y;
     double radian;
-    radian = degree * M_PI / 180.0;
+    radian = degree * PI() / 180.0;
     x = a * (radian - sin(radian));
     y = a * (1 - cos(radian));
     X = -x + dx;
@@ -200,7 +200,7 @@ void img_drawTrochoidPoint2(struct color c, int dx, int dy, int a, int b, double
     }
     int x, y;
     double radian;
-    radian = degree * M_PI / 180.0;
+    radian = degree * PI() / 180.0;
     x = a * radian - b * sin(radian) + dx;
     y = a - b * cos(radian) + dy;
     img_fillCircle(c, x, y, bold);
@@ -237,7 +237,7 @@ void img_drawTrochoidPointRev2(struct color c, int dx, int dy, int a, int b, dou
     }
     int x, y, X, Y;
     double radian;
-    radian = degree * M_PI / 180.0;
+    radian = degree * PI() / 180.0;
     x = a * radian - b * sin(radian);
     y = a - b * cos(radian);
     X = -x + dx;
