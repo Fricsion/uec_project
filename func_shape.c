@@ -11,6 +11,7 @@ void img_fillCircle(struct color c, double x, double y, double r);
 void img_fillCircle2(struct color c, double x, double y, double r, int min_deg, int max_deg);
 void img_fillRectangle(struct color c, int x1, int y1, int width, int height);
 void img_drawLine(struct color c, double a, int b, int x1, int x2);
+void img_drawLinePolar(struct color c, int ox, int oy, double r, double t);
 void img_drawCycloidPoint(struct color c, int a, int dx, int dy, double degree);
 void img_drawCycloidPoint2(struct color c, int a, int dx, int dy, double degree, int bold);
 void img_drawCycloidPointRev(struct color c, int a, int dx, int dy, double degree);
@@ -116,6 +117,16 @@ void img_drawLine(struct color c, double a, int b, int x1, int x2)
         y = a * x1 + b;
         img_putpixel(c, x1, y);
     }
+}
+
+void img_drawLinePolar(struct color c, int ox, int oy, double r /*radius*/, double t/*theta*/) {
+	int x, y;
+	int i;
+	for (i = 0; i <= r; i++) {
+		x = ox + i * cos(t);
+		y = oy + i * sin(t);
+		img_putpixel(c, x, y);
+	}
 }
 
 void img_drawCycloidPoint(struct color c, int a, int dx, int dy, double degree)

@@ -24,6 +24,8 @@ int main(void)
 
 		img_fillRectangle(gray, 0, 0, 300, 100);
 
+		img_drawLinePolar(red, 30, 30, 10, PI()/4);
+
 		// パラメータ変数 t で場合わけ
 		if (t <= 4 * PI())
 		{

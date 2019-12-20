@@ -66,7 +66,8 @@ void img_fillRectangle(struct color c, int x1, int y1, int width, int height);
 * {int x2}: 直線の終点のx座標
 */
 void img_drawLine(struct color c, double a, int b, int x1, int x2);
-
+// 極形式で直線描きます
+void img_drawLinePolar(struct color c, int ox, int oy, double r /*radius*/, double t/*theta*/);
 /*
 * サイクロイドの1点描く関数
 * {struct color c}: サイクロイドの色
