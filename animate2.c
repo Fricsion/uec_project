@@ -30,7 +30,7 @@ int main(void)
 		if (t <= 4 * PI())
 		{
 			img_fillCircle(indigo, rad * t + divx, rad + divy, rad);
-			img_fillCircle2(gray, rad*t +divx, rad + divy, rad, t*180/PI(), (t+PI())*180/PI());
+			img_fillCircle2(gray, rad*t +divx, rad + divy, rad, t, t+PI());
 		}
 		else if (t <= 5 * PI())
 		{
