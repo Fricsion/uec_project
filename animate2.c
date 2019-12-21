@@ -28,26 +28,30 @@ int main(void)
 		img_fillRectangle(deepbrown, 0, 0, 300, 100);
 
 		// パラメータ変数 t で場合わけ
+		int ox, oy;
 		if (t <= 4 * PI())
 		{
-			img_fillCircle(indigo, rad * t + divx, rad + divy, rad);
-			img_drawLinePolar(yellow, rad*t +divx, rad +divy, 2*rad, 3*PI()/2-t);
+			ox = rad * t + divx;
+			oy = rad + divy;
 		}
 		else if (t <= 5 * PI())
 		{
-			img_fillCircle(indigo, rad * 4 * PI() + rad * sin(t - 4 * PI()) + divx, rad * cos(t - 4 * PI()) + divy, rad);
-			img_drawLinePolar(yellow, rad * 4 * PI() + rad * sin(t - 4 * PI()) + divx, rad * cos(t - 4 * PI()) + divy, rad, 3*PI()/2-t);
+			ox = rad * 4 * PI() + rad * sin(t - 4 * PI()) + divx;
+			oy = rad * cos(t - 4 * PI()) + divy;
 		}
 		else if (t <= 9 * PI())
 		{
-			img_fillCircle(indigo, rad * 4 * PI() - rad * (t - 5 * PI()) + divx, -rad + divy, rad);
-			img_drawLinePolar(yellow, rad * 4 * PI() - rad * (t - 5 * PI()) + divx, -rad + divy, rad*2, -PI()/2 - t); 
+			ox = rad * 4 * PI() - rad * (t - 5 * PI()) + divx;
+			oy = -rad + divy;
 		}
 		else if (t <= 10 * PI())
 		{
-			img_fillCircle(indigo, -rad * sin(t - 9 * PI()) + divx, -rad * cos(t - 9 * PI()) + divy, rad);
-			img_drawLinePolar(yellow, -rad * sin(t - 9 * PI()) + divx, -rad * cos(t - 9 * PI()) + divy, rad, -PI()/2 - t);
+			ox = -rad * sin(t - 9 * PI()) + divx;
+			oy = -rad * cos(t - 9 * PI()) + divy;
 		}
+
+		img_fillCircle(indigo, ox, oy, rad);
+		img_drawLinePolar(yellow, ox, oy, ((4*PI() <= t && t <= 5*PI()) || (9*PI() <= t && t <= 10*PI())) ? rad : 2*rad, (t<=5*PI()) ? 3*PI()/2-t : -PI()/2 - t);
 
 		if (t <= 12 * PI())
 		{
